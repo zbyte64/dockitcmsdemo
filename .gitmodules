@@ -1,12 +1,9 @@
-[submodule "dockitcms"]
-	path = dockitcms
-	url = git://github.com/zbyte64/django-dockitcms.git
-[submodule "dockit"]
-	path = dockit
+[submodule "lib/django-schemamaker"]
+	path = lib/django-schemamaker
+	url = git://github.com/zbyte64/django-schemamaker.git
+[submodule "lib/django-dockit"]
+	path = lib/django-dockit
 	url = git://github.com/zbyte64/django-dockit.git
-[submodule "django-schemamaker"]
-	path = django-schemamaker
-	url = git://github.com/zbyte64/django-schemamaker.git
-[submodule "schemamaker"]
-	path = schemamaker
-	url = git://github.com/zbyte64/django-schemamaker.git
+[submodule "lib/django-dockitcms"]
+	path = lib/django-dockitcms
+	url = git://github.com/zbyte64/django-dockitcms.git
