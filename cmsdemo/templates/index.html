@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+Active Viewpoints:
+<ul>
+{% for view_point in view_points %}
+<li>
+<a href="{{view_point.get_absolute_url}}">{{view_point}}</a>
+</li>
+{% endfor %}
+<ul>
+{% endblock %}

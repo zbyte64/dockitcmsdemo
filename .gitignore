@@ -4,4 +4,5 @@
 *.py[cdo]
 *~
 /cmsdemo/db.sqlite
+/cmsdemo/media
 
