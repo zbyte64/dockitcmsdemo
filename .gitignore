@@ -1,0 +1,10 @@
+/bin/
+/include/
+/lib/
+*.py[cdo]
+*~
+/cmsdemo/db.sqlite
+/cmsdemo/dockit
+/cmsdemo/dockitcms
+/cmsdemo/schemamaker
+
