@@ -52,7 +52,7 @@ if 'MONGOLAB_URI' in os.environ:
         params = match.groupdict()
         
         MONGO_HOST = params['host']
-        MONGO_USERNAME = params['username']
+        MONGO_USER = params['username']
         MONGO_PASSWORD = params['password']
         MONGO_PORT = int(params['port'])
         MONGO_DB = params['database']
