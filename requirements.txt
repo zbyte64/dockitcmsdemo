@@ -3,4 +3,5 @@ psycopg2
 gevent
 gunicorn
 django-storages
+pymongo
 

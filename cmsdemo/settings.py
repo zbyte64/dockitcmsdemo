@@ -23,6 +23,11 @@ DATABASES = {
     }
 }
 
+DOCKIT_BACKEND = 'dockit.backends.mongo.backend.MongoDocumentStorage'
+MONGO_HOST = 'localhost'
+MONGO_PORT = 27017
+MONGO_DB = 'cmsdemo'
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -125,7 +130,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'dockit',
-    'dockit.backends.djangodocument',
+    #'dockit.backends.djangodocument',
     'dockitcms',
     'schemamaker',
 )

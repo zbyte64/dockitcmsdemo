@@ -1,5 +1,6 @@
 import os
 from settings import *
+import re
 
 INSTALLED_APPS = list(INSTALLED_APPS)
 
@@ -28,7 +29,6 @@ if 'S3_KEY' in os.environ:
 
 
 if 'REDISTOGO_URL' in os.environ:
-    import re
     pattern = re.compile(r'^redis://redistogo:(?P<password>[\w\d]+)@(?P<location>.+)/$')
     match = pattern.match(os.environ['REDISTOGO_URL'])
     if match:
@@ -44,4 +44,14 @@ if 'REDISTOGO_URL' in os.environ:
                 },
             },
         }
+
+if 'MONGOLAB_URI' in os.environ:
+    pattern = re.compile(r'^mongodb://(?P<username>[\w\d]+):(?P<password>[\w\d]+)@(?P<host>.+):(?P<port>\d+)/(?P<database>[\w\d]+)'
+    match = pattern.match(os.environ['MONGOLAB_URI'])
+    if match:
+        MONGO_HOST = params['host']
+        MONGO_USERNAME = params['username']
+        MONGO_PASSWORD = params['password']
+        MONGO_PORT = params['port']
+        MONGO_DB = params['database']
 
