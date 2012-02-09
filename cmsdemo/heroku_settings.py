@@ -54,6 +54,6 @@ if 'MONGOLAB_URI' in os.environ:
         MONGO_HOST = params['host']
         MONGO_USERNAME = params['username']
         MONGO_PASSWORD = params['password']
-        MONGO_PORT = params['port']
+        MONGO_PORT = int(params['port'])
         MONGO_DB = params['database']
 
