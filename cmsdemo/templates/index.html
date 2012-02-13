@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-Active Viewpoints:
+<h1>Welcome to dockitcms demo site</h1>
+<p>
+    <a href="/admin/">Admin Interface</a>
+    username:cmsdemo, password:cmsdemo
+</p>
+
+<h2>Active Viewpoints</h2>
 <ul>
 {% for view_point in view_points %}
 <li>
