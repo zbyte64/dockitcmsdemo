@@ -152,7 +152,9 @@ INSTALLED_APPS = (
     'dockit',
     #'dockit.backends.djangodocument',
     'dockitcms',
-    'schemamaker',
+    #'dockitcms.contrib.thumbnailfield',
+    'dockitcms.contrib.dagcategoryviewpoint',
+    'dockitcms.contrib.widgetbucket',
 )
 
 # A sample logging configuration. The only tangible logging
