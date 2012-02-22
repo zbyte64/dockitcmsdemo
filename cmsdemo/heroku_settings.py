@@ -18,7 +18,7 @@ if 'S3_KEY' in os.environ:
     AWS_ACCESS_KEY_ID = os.environ['S3_KEY']
     AWS_SECRET_ACCESS_KEY = os.environ['S3_SECRET']
 
-    DEFAULT_FILE_STORAGE = 'storages.backends.s3.S3Storage'
+    DEFAULT_FILE_STORAGE = 'storage.UnicodeSafeS3Storage'
     AWS_STORAGE_BUCKET_NAME = "%s-media" % PROJECT_NAME
 
     STATICFILES_STORAGE="storage.StaticS3FileStorage"

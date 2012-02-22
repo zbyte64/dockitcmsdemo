@@ -2,7 +2,12 @@ from storages.backends.s3 import S3Storage, DEFAULT_ACL
 
 from django.conf import settings
 
-class StaticS3FileStorage(S3Storage):
+class UnicodeSafeS3Storage(S3Storage):
+    def _clean_name(self, name):
+        #herp derp in python 2.7 plus someone prematurely closing an issue: https://bitbucket.org/david/django-storages/issue/64/unicode-filenames-problem-with-rackspace
+        return str(super(UnicodeSafeS3Storage, self)._clean_name(name))
+
+class StaticS3FileStorage(UnicodeSafeS3Storage):
     """
 Standard file system storage for static files.
 """
