@@ -4,7 +4,7 @@ gevent
 gunicorn
 django-storages
 pymongo
-https://github.com/downloads/zbyte64/django-dockit/django-dockit-0.0.2.tar.gz
-https://github.com/downloads/zbyte64/django-dockitcms/django-dockitcms-0.0.2.tar.gz
+django-dockit==0.0.4
+django-dockitcms==0.0.4
 django-classy-tags
 django-admin-tools
