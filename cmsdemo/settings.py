@@ -107,6 +107,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'dockitcms.middleware.DockitCMSMiddleware',
+    'dockitcms.middleware.DefaultScopeMiddleware',
 )
 
 ROOT_URLCONF = 'cmsdemo.urls'
@@ -180,4 +181,9 @@ LOGGING = {
 }
 
 ADMIN_TOOLS_INDEX_DASHBOARD = 'cmsdemo.dashboard.CustomIndexDashboard'
+
+SCOPE_PROCESSORS = [
+    'dockitcms.widgetblock.scope_processors.widgets',
+    'dockitcms.widgetblock.scope_processors.modelwidgets',
+]
 
