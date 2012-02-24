@@ -4,7 +4,7 @@ gevent
 gunicorn
 django-storages
 pymongo
-django-dockit==0.0.4
-django-dockitcms==0.0.4
+django-dockit==0.0.5
+django-dockitcms==0.0.5
 django-classy-tags
 django-admin-tools
