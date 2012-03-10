@@ -45,6 +45,20 @@ if 'REDISTOGO_URL' in os.environ:
             },
         }
 
+if ('MEMCACHE_PASSWORD' in os.environ and
+    'MEMCACHE_SERVERS' in os.environ and
+    'MEMCACHE_USERNAME' in os.environ):
+    #REQUIREMENTS: pylibmc==1.2.2 django-pylibmc-sasl==0.2.4
+    CACHES = {
+        'default': {
+            'BACKEND': 'django_pylibmc.memcached.PyLibMCCache',
+            'LOCATION': os.environ['MEMCACHE_SERVERS'],
+            'username': os.environ['MEMCACHE_USERNAME'],
+            'password': os.environ['MEMCACHE_PASSWORD'],
+            'binary': True,
+        },
+    }
+
 if 'MONGOLAB_URI' in os.environ:
     pattern = re.compile(r'^mongodb://(?P<username>[\w\d]+):(?P<password>[\w\d]+)@(?P<host>.+):(?P<port>\d+)/(?P<database>[\w\d]+)')
     match = pattern.match(os.environ['MONGOLAB_URI'])
