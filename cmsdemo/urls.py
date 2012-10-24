@@ -5,6 +5,11 @@ from django.conf import settings
 from django.contrib import admin
 admin.autodiscover()
 
+import hyperadmin
+hyperadmin.site.install_models_from_site(admin.site) #ports admin models to hyperadmin
+hyperadmin.site.install_storage_resources() #enables the storage resource for media and static
+hyperadmin.autodiscover()
+
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'cmsdemo.views.home', name='home'),
@@ -16,6 +21,7 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     url(r'^admin_tools/', include('admin_tools.urls')),
+    url(r'^hyperapi/', include(hyperadmin.site.urls)),
 )
 
 if settings.DEBUG:
@@ -25,3 +31,4 @@ if settings.DEBUG:
         (r'^media/(?P<path>.*)$', 'static.serve', {'document_root': settings.MEDIA_ROOT}),
     )
 
+urlpatterns += patterns('', (r'', include('dockitcms.urls')))
