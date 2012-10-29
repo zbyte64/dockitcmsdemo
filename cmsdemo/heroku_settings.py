@@ -68,7 +68,7 @@ if 'SENTRY_DSN' in os.environ:
     if 'raven.contrib.django' not in INSTALLED_APPS:
         INSTALLED_APPS.append('raven.contrib.django')
 
-if 'MONGOLAB_URI' in os.environ:
+if 'MONGOLAB_URI' in os.environ and False:
     pattern = re.compile(r'^mongodb://(?P<username>[\w\d]+):(?P<password>[\w\d]+)@(?P<host>.+):(?P<port>\d+)/(?P<database>[\w\d]+)')
     match = pattern.match(os.environ['MONGOLAB_URI'])
     if match:
@@ -93,7 +93,7 @@ if 'MONGOLAB_URI' in os.environ:
         DOCKIT_BACKENDS['default'] = DOCKIT_BACKENDS['mongo']
         DOCKIT_INDEX_BACKENDS['default'] = DOCKIT_INDEX_BACKENDS['mongo']
 
-if 'MONGOHQ_URL' in os.environ:
+if 'MONGOHQ_URL' in os.environ and False:
     pattern = re.compile(r'^mongodb://(?P<username>[\w\d]+):(?P<password>[\w\d]+)@(?P<host>.+):(?P<port>\d+)/(?P<database>[\w\d]+)')
     match = pattern.match(os.environ['MONGOHQ_URL'])
     if match:
