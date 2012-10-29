@@ -1,6 +1,6 @@
 Django==1.4.2
-django-dockit==0.0.10
-django-dockitcms==0.0.10
+-e git+git://github.com/zbyte64/django-dockit.git#egg=django-dockit
+-e git+git://github.com/zbyte64/django-dockitcms.git@hyperadmin#egg=django-dockitcms
 django-classy-tags
 
 pytz

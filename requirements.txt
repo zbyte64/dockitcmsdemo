@@ -4,8 +4,8 @@ gevent
 gunicorn
 django-storages
 pymongo
-django-dockit==0.0.10
-django-dockitcms==0.0.10
+-e git+git://github.com/zbyte64/django-dockit.git#egg=django-dockit
+-e git+git://github.com/zbyte64/django-dockitcms.git@hyperadmin#egg=django-dockitcms
 django-classy-tags
 pylibmc==1.2.2
 django-pylibmc-sasl==0.2.4
