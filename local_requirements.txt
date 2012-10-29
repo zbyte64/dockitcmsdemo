@@ -7,4 +7,4 @@ pytz
 mimeparse
 -e git+git://github.com/zbyte64/django-hyperadmin.git#egg=django-hyperadmin
 -e git+git://github.com/zbyte64/django-hyperadmin-dockitresource.git#egg=django-hyperadmin-dockitresource
--e git+git://github.com/zbyte64/django-hyperadminclient.git#egg=django-hyperadminclient
+-e git+git://github.com/zbyte64/django-hyperadmin-client.git#egg=django-hyperadmin-client
